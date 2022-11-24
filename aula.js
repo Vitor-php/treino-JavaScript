@@ -24,21 +24,35 @@
 
 // Teste de construtores
 // Transformar esse objeto em uma Constructor Function
-const pessoa = {
-    nome: "Nome Pessoa",
-    idade: 20,
-    andar() {
-        console.log(this.nome + 'andou');
-    }
-}
+// const pessoa = {
+//     nome: "Nome Pessoa",
+//     idade: 20,
+//     andar() {
+//         console.log(this.nome + 'andou');
+//     }
+// }
 
-function pessoa(nome, idade) {
-    this.nome = nome;
-    this.idade = idade;
-    this.andar = function () {
-        console.log(this.nome + 'andou');
-    }
-}
+// function pessoa(nome, idade) {
+//     this.nome = nome;
+//     this.idade = idade;
+//     this.andar = function () {
+//         console.log(this.nome + 'andou');
+//     }
+// }
 
-const pessoa1 = new pessoa('Vitor', 21);
-const pessoa2 = new pessoa('João', 22);
+// const pessoa1 = new pessoa('Vitor', 21);
+// const pessoa2 = new pessoa('João', 22);
+
+const comidas = ["Pizza", "Frango", "Carne", "Macarrão", "Banana"];
+// Remova o primeiro valor de comidas e coloque em uma variavel
+const primeiraComida = comidas.shift();
+//Remova o ultimo valor de comidas e coloque em uma variavel
+const ultimaComida = comidas.pop();
+// Adicione Arroz ao final do array
+comidas.push('Arroz');
+// Adiocione Peixe e Batata ao inicio do array
+comidas.unshift('Peixe', 'Batata');
+// Percorra o array comidas e verifique se a comida Bananá faz parte dele
+const temBanana = comidas.includes("Banana");
+console.log("tem banana? " + temBanana)
+console.log(comidas)
